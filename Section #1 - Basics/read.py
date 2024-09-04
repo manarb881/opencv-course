@@ -3,7 +3,7 @@
 import cv2 as cv
 
 img = cv.imread('../Resources/Photos/cats.jpg')
-cv.imshow('Cats', img)
+cv.imshow('Cats', img) #cat is the name of the window 
 
 cv.waitKey(0)
 
@@ -11,7 +11,7 @@ cv.waitKey(0)
 capture = cv.VideoCapture('../Resources/Videos/dog.mp4')
 
 while True:
-    isTrue, frame = capture.read()
+    isTrue, frame = capture.read()  # frame is to display the video on frams (parts)
     
     # if cv.waitKey(20) & 0xFF==ord('d'):
     # This is the preferred way - if `isTrue` is false (the frame could 
@@ -24,5 +24,5 @@ while True:
     else:
         break
 
-capture.release()
+capture.release()  
 cv.destroyAllWindows()
